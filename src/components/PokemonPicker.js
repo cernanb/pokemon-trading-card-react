@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class CharacterPicker extends Component {
+class PokemonPicker extends Component {
   state = { isLoading: false, pokemon: [] };
 
   componentDidMount() {
@@ -37,8 +37,8 @@ class CharacterPicker extends Component {
   }
 }
 
-CharacterPicker.propTypes = {
+PokemonPicker.propTypes = {
   onCharacterSelect: PropTypes.func,
 };
 
-export default CharacterPicker;
+export default PokemonPicker;
