@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import CharacterPicker from './components/CharacterPicker';
 import './App.css';
 
 class App extends Component {
   state = {
-    selectedCharacter: 1,
+    selectedCharacter: 'dp6-90',
     evolved: false,
     destroyed: false,
   };
@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <CharacterPicker onCharacterSelect={this.changeSelectedCharacter} />
           {selectedCharacter}
           <p>
             Edit <code>src/App.js</code> and save to reload.
