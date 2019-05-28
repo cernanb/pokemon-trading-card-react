@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PokemonPicker from './components/PokemonPicker';
+import Pokemon from './components/Pokemon';
 import './App.css';
 
 class App extends Component {
@@ -22,17 +23,7 @@ class App extends Component {
         <header className="App-header">
           <PokemonPicker onCharacterSelect={this.changeSelectedCharacter} />
           {selectedCharacter}
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <Pokemon selectedCharacter={selectedCharacter} />
         </header>
       </div>
     );
