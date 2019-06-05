@@ -6,12 +6,7 @@ import './App.css';
 class App extends Component {
   state = {
     selectedCharacter: 'dp6-90',
-    evolved: false,
-    destroyed: false,
   };
-
-  toggleEvolved = () =>
-    this.setState(prevState => ({ evolved: !prevState.evolved }));
 
   changeSelectedCharacter = id =>
     this.setState(() => ({ selectedCharacter: id }));

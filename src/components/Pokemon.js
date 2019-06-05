@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Summary from './Summary';
 
 class Pokemon extends Component {
   state = { isLoading: false, loadedCharacter: {} };
@@ -40,7 +41,12 @@ class Pokemon extends Component {
     let content = <p>Loading pokemon info...</p>;
     const { loadedCharacter, isLoading } = this.state;
     if (!isLoading && loadedCharacter.id) {
-      content = <p>Character found {loadedCharacter.name}</p>;
+      content = (
+        <Summary
+          name={loadedCharacter.name}
+          imageUrl={loadedCharacter.imageUrl}
+        />
+      );
     }
 
     return content;
